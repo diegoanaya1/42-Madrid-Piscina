@@ -1,0 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danaya-r <danaya-r@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/10 15:02:03 by danaya-r          #+#    #+#             */
+/*   Updated: 2023/02/12 15:48:28 by danaya-r         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <stdio.h>
+#include <string.h>
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = src[i];
+	return (dest);
+}
+
+int	main(void)
+
+{
+	char	str1[];
+	char	str2[];
+
+	str1[] = "1234";
+	str2[] = "4567";
+	printf("%s\n", str1);
+	ft_strcpy(str1, str2);
+	printf("%s\n", "Ahora str1 pasara a ser str2");
+	printf("%s\n", str1);
+	return (0);
+}
