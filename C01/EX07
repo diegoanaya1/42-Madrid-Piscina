@@ -1,0 +1,48 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danaya-r <danaya-r@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/09 18:07:17 by danaya-r          #+#    #+#             */
+/*   Updated: 2023/02/09 18:25:08 by danaya-r         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+char	*ft_rev_int_tab(char *str)
+{
+	int	len;
+	int	count;
+	char	ascii;
+
+	len = 0;
+	count = 0;
+	while (str[len])
+	{
+		len++;
+	}
+	len = len - 1;
+	while (count < len)
+	{
+		ascii = str[count];
+		str[count] = str[len];
+		str[len] = ascii;
+		count++;
+		len--;
+	}
+	return (str);
+}
+
+int	main(void)
+{
+	char	str[];
+
+	str[] = "piscina42";
+	printf("%s / ", str);
+	ft_rev_int_tab(str);
+	printf("%s", str);
+	return (0);
+}
