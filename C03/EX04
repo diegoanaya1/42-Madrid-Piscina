@@ -1,0 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danaya-r <danaya-r@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/14 18:18:57 by danaya-r          #+#    #+#             */
+/*   Updated: 2023/02/16 16:38:22 by danaya-r         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include<stdio.h>
+#include<string.h>
+
+char *ft_strstr(char *str, char*to_find)
+{
+	int i;
+	int k;
+
+	i = 0;
+	if (to_find[0] == '\0')
+		return (str);
+	while (str[i] != '\0')
+	{
+		k = 0;
+		while (str[i + k] != '\0' && str[i + k] == to_find[k])
+		{
+			if (to_find[k + 1] == '\0')
+				return (&str[i]);
+			++k;
+		}
+		++i;
+	}
+	return (0);
+}
+int main()
+{
+  char str[]="recall";
+  char str1[]="call";
+  char *igual;
+
+  igual = ft_strstr(str,str1);
+  printf("lo que se repite es :%s\n", igual);
+}
